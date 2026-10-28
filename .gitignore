@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.svg
+tests/*_out.t3d
+tests/*_out.json

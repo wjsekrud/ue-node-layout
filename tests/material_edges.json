@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {"id": "out",  "title": "M_Test", "x": 1500, "y": 0, "pins": [{"name": "Base Color"}, {"name": "Metallic"}, {"name": "Roughness"}, {"name": "Normal"}]},
+    {"id": "tex",  "title": "TextureSample", "x": 0, "y": 0},
+    {"id": "uv",   "title": "TexCoord", "x": 250, "y": 0},
+    {"id": "tile", "title": "Tiling (Scalar Param)", "x": 500, "y": 0},
+    {"id": "mul",  "title": "Multiply", "x": 750, "y": 0},
+    {"id": "tint", "title": "Tint (Vector Param)", "x": 1000, "y": 0},
+    {"id": "mul2", "title": "Multiply", "x": 1250, "y": 0},
+    {"id": "rough","title": "Roughness (Scalar Param)", "x": 1750, "y": 0},
+    {"id": "nrm",  "title": "NormalMap", "x": 2000, "y": 0}
+  ],
+  "edges": [
+    {"from": "uv", "to": "mul", "toPin": "A"},
+    {"from": "tile", "to": "mul", "toPin": "B"},
+    {"from": "mul", "to": "tex", "toPin": "UVs"},
+    {"from": "mul", "to": "nrm", "toPin": "UVs"},
+    {"from": "tex", "to": "mul2", "toPin": "A"},
+    {"from": "tint", "to": "mul2", "toPin": "B"},
+    {"from": "mul2", "to": "out", "toPin": "Base Color"},
+    {"from": "rough", "to": "out", "toPin": "Roughness"},
+    {"from": "nrm", "to": "out", "toPin": "Normal"}
+  ]
+}

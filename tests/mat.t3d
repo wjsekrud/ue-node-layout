@@ -1,0 +1,39 @@
+Begin Object Class=/Script/UnrealEd.MaterialGraphNode Name="MaterialGraphNode_0"
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureCoordinate Name="MaterialExpressionTextureCoordinate_0"
+   End Object
+   Begin Object Name="MaterialExpressionTextureCoordinate_0"
+      MaterialExpressionEditorX=0
+      MaterialExpressionEditorY=0
+   End Object
+   MaterialExpression=MaterialExpressionTextureCoordinate'MaterialExpressionTextureCoordinate_0'
+   NodePosX=0
+   NodeGuid=00000000000000000000000000000000
+   CustomProperties Pin (PinId=A0000000000000000000000000000000,PinName="A",PinType.PinCategory="required",)
+   CustomProperties Pin (PinId=B0000000000000000000000000000000,PinName="Output",Direction="EGPD_Output",PinType.PinCategory="",LinkedTo=(MaterialGraphNode_1 A0000000000000000000000000000001,),)
+End Object
+Begin Object Class=/Script/UnrealEd.MaterialGraphNode Name="MaterialGraphNode_1"
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_1"
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_1"
+      MaterialExpressionEditorX=400
+      MaterialExpressionEditorY=0
+   End Object
+   MaterialExpression=MaterialExpressionMultiply'MaterialExpressionMultiply_1'
+   NodePosX=400
+   NodeGuid=00000000000000000000000000000001
+   CustomProperties Pin (PinId=A0000000000000000000000000000001,PinName="A",PinType.PinCategory="required",LinkedTo=(MaterialGraphNode_0 B0000000000000000000000000000000,),)
+   CustomProperties Pin (PinId=B0000000000000000000000000000001,PinName="Output",Direction="EGPD_Output",PinType.PinCategory="",LinkedTo=(MaterialGraphNode_2 A0000000000000000000000000000002,),)
+End Object
+Begin Object Class=/Script/UnrealEd.MaterialGraphNode Name="MaterialGraphNode_2"
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_2"
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_2"
+      MaterialExpressionEditorX=800
+      MaterialExpressionEditorY=0
+   End Object
+   MaterialExpression=MaterialExpressionTextureSample'MaterialExpressionTextureSample_2'
+   NodePosX=800
+   NodeGuid=00000000000000000000000000000002
+   CustomProperties Pin (PinId=A0000000000000000000000000000002,PinName="A",PinType.PinCategory="required",LinkedTo=(MaterialGraphNode_1 B0000000000000000000000000000001,),)
+   CustomProperties Pin (PinId=B0000000000000000000000000000002,PinName="Output",Direction="EGPD_Output",PinType.PinCategory="",)
+End Object
